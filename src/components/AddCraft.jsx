@@ -10,14 +10,14 @@ const AddCraft = () => {
         const type=e.target.type.value;
         const ratting =e.target.rating.value;
 
-        const newCraft={name,artistName,price,image,type,ratting}
+        const newPainting={name,artistName,price,image,type,ratting}
         // console.log(newCraft);
         fetch('http://localhost:5000/painting',{
             method:'POST',
             headers:{
                 'content-type':'application/json'
             },
-            body:JSON.stringify(newCraft)
+            body:JSON.stringify(newPainting)
         })
         .then(res=>res.json())
         .then(data=>{
