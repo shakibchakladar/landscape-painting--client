@@ -19,7 +19,7 @@ const [theme,setTheme]=useState('light');
         document.querySelector('html').setAttribute('data-theme',localTheme)
     },[theme])
     return (
-        <div className='fixed z-10 px-4 shadow-lg navbar bg-base-100 sm:px-8'>
+        <div className='fixed z-10 px-4 -mt-10 shadow-lg navbar bg-base-100 sm:px-8'>
       <div className='flex-1'>
         <Link
           to='/'
@@ -37,6 +37,14 @@ const [theme,setTheme]=useState('light');
             to='/'
           >
             Home
+          </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? 'border border-green-600 btn text-primary font-bold' : ' btn font-bold'
+            }
+            to='/allCraft'
+          >
+            All Art & craft Items
           </NavLink>
 
           <NavLink

@@ -1,14 +1,15 @@
 import { useLoaderData } from "react-router-dom";
 import PaintingCard from "./PaintingCard";
+// import Footer from "./Footer";
 
 const Home = () => {
   const paintings = useLoaderData();
   return (
-    <div className="pt-28">
+    <div className="container mx-auto pt-28 px-7">
       <div className="w-full carousel">
         <div id="slide1" className="carousel-item relative w-full h-[500px]">
           <img
-            src="https://i.ibb.co/r55F4kn/british-library-g-UDNK8-Nq-YHk-unsplash.jpg"
+            src="https://daisyui.com/images/stock/photo-1414694762283-acccc27bca85.jpg"
             className="w-full h-[500px]"
           />
           <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -73,6 +74,7 @@ const Home = () => {
 
       }
       </div>
+      {/* <Footer></Footer> */}
     </div>
   );
 };

@@ -8,6 +8,7 @@ import "./index.css";
 import Root from "../public/layout/Root";
 import Home from "./components/Home";
 import AddCraft from "./components/AddCraft";
+import AllCraft from "./components/AllCraft";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,11 @@ const router = createBrowserRouter([
       {
         path:'/addCraft',
         element:<AddCraft></AddCraft>
+      },
+      {
+        path:'/allCraft',
+        element:<AllCraft></AllCraft>,
+        loader:()=>fetch('http://localhost:5000/alCraft')
       }
     ]
   },

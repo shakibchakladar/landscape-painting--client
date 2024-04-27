@@ -3,7 +3,7 @@ const PaintingCard = ({painting}) => {
     console.log(painting);
    const  {image}=painting
     return (
-        <div className="max-w-lg p-4 shadow-md dark:bg-gray-50 dark:text-gray-800">
+        <div className="max-w-lg p-4 shadow-md dark:bg-gray-800 dark:text-gray-50 bg-gray-50">
 	<div className="flex justify-between pb-4 border-bottom">
 		<div className="flex items-center">
 			<a rel="noopener noreferrer" href="#" className="mb-0 capitalize dark:text-gray-800">Photography</a>
