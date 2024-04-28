@@ -16,11 +16,13 @@ import Users from "./pages/Users";
 import FirebasePovider from "./provides/FirebasePovider";
 import Register from "./pages/login/Register";
 import PrivateRoute from "./privateRoute/PrivateRoute";
+import ErrorElement from "./pages/ErrorElement";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element:<Root></Root>,
+    errorElement:<ErrorElement></ErrorElement>,
     children:[
       {
         path:'/',
