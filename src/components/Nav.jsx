@@ -63,6 +63,14 @@ const [theme,setTheme]=useState('light');
           >
             My Art&Craft List
           </NavLink>
+          <NavLink
+            className= {({ isActive }) =>
+              isActive ? ' btn text-primary bg-green-300 font-bold' : ' btn font-bold'
+            }
+            to='/users'
+          >
+            Users
+          </NavLink>
         </ul>
 
         <div className="flex items-center gap-5">

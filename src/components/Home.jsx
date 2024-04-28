@@ -9,7 +9,7 @@ const Home = () => {
       <div className="w-full carousel">
         <div id="slide1" className="carousel-item relative w-full h-[500px]">
           <img
-            src="https://daisyui.com/images/stock/photo-1414694762283-acccc27bca85.jpg"
+            src="https://i.ibb.co/ydh3PRh/painted-natural-scenery-with-high-mountains-free-photo.png"
             className="w-full h-[500px]"
           />
           <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
