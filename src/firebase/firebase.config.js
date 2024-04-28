@@ -1,18 +1,19 @@
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCBACht4sZVBZulVdl9iVBRUxXrO9Vu4Nw",
-  authDomain: "craft-store-authentication.firebaseapp.com",
-  projectId: "craft-store-authentication",
-  storageBucket: "craft-store-authentication.appspot.com",
-  messagingSenderId: "1091105528883",
-  appId: "1:1091105528883:web:69e1814ace7d034db69746"
+  apiKey: "AIzaSyDyBhvVdZmMvfBlgCmz9IijWkECTpIuhf0",
+  authDomain: "craft-store-auth.firebaseapp.com",
+  projectId: "craft-store-auth",
+  storageBucket: "craft-store-auth.appspot.com",
+  messagingSenderId: "500106890832",
+  appId: "1:500106890832:web:592db4ebb212330d738b55"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-export default app;
+
+// Initialize Firebase Authentication and get a reference to the service
+const auth = getAuth(app);
+export default auth;
