@@ -1,8 +1,12 @@
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/auth/useAuth";
 
 const Login = () => {
+    const { googleLogin,githubLogin } = useAuth();
+    const navigate=useNavigate();
+    const location=useLocation();
+    const from=location.state ||'/';
   const { signInUser } =useAuth();
 
   const {
@@ -14,10 +18,10 @@ const Login = () => {
     const {email,password}=data;
     signInUser(email,password)
     .then(result=>{
-      console.log(result.user);
-    }).catch(error=>{
-      console.log(error);
-    })
+        if(result.user){
+          navigate(from);
+        }
+      })
      }
 
    

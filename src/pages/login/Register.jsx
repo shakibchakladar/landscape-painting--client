@@ -1,26 +1,30 @@
 // import { useContext } from "react";
 // import { AuthContext } from "../../provides/FirebasePovider";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import SocialLogin from "./SocialLogin";
 import useAuth from "../../hooks/auth/useAuth";
 
 const Register = () => {
-   const {createUser}=useAuth();
+  const { googleLogin, githubLogin } = useAuth();
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location?.state || "/";
+  const { createUser } = useAuth();
 
-   const {
+  const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const onSubmit= (data) =>{
-    const {email,password}=data
-    createUser(email,password)
-    .then(result=>{
-        console.log(result);
-    })
-  }
-
+  const onSubmit = (data) => {
+    const { email, password } = data;
+    createUser(email, password).then((result) => {
+      if (result.user) {
+        navigate(from);
+      }
+    });
+  };
 
   return (
     <>

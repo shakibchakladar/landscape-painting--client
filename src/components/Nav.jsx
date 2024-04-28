@@ -19,7 +19,6 @@ const Nav = () => {
     const localTheme = localStorage.getItem("theme");
     document.querySelector("html").setAttribute("data-theme", localTheme);
   }, [theme]);
-
   return (
     <div className="fixed z-10 px-4 -mt-10 shadow-lg navbar bg-base-100 sm:px-8">
       <div className="flex-1">

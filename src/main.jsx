@@ -15,6 +15,7 @@ import Login from "./pages/login/Login";
 import Users from "./pages/Users";
 import FirebasePovider from "./provides/FirebasePovider";
 import Register from "./pages/login/Register";
+import PrivateRoute from "./privateRoute/PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -28,7 +29,9 @@ const router = createBrowserRouter([
       },
       {
         path:'/addCraft',
-        element:<AddCraft></AddCraft>
+        element:<PrivateRoute>
+          <AddCraft/>
+        </PrivateRoute>
       },
       {
         path:'/allCraft',
