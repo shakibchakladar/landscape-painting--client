@@ -18,6 +18,7 @@ import Register from "./pages/login/Register";
 import PrivateRoute from "./privateRoute/PrivateRoute";
 import ErrorElement from "./pages/ErrorElement";
 import Contact from "./components/Contact";
+import MyCraftList from "./pages/MyCraftList";
 
 const router = createBrowserRouter([
   {
@@ -57,6 +58,10 @@ const router = createBrowserRouter([
       {
         path:'/contact',
         element:<Contact></Contact>
+      },
+      {
+        path:'/myList',
+        element:<MyCraftList></MyCraftList>
       }
     ]
   },

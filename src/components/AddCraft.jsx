@@ -1,7 +1,10 @@
 import Swal from "sweetalert2";
+import useAuth from "../hooks/auth/useAuth";
 
 const AddCraft = () => {
+  const {user}=useAuth() ||{};
   const handleAddCraft = (e) => {
+
     e.preventDefault();
     const name = e.target.name.value;
     const subcategory = e.target.subcategory.value;
@@ -11,6 +14,8 @@ const AddCraft = () => {
     const ratting = e.target.rating.value;
     const Customization=e.target.customization.value;
     const ProccessingTime=e.target.Proccessing_time.value;
+    const email=user.email;
+    console.log(email);
 
     // const newPainting={name,subcategory,price,image,short_description,ratting}
     const newCraft = {
@@ -21,7 +26,8 @@ const AddCraft = () => {
       short_description,
       ratting,
       Customization,
-      ProccessingTime
+      ProccessingTime,
+      email,
     };
     // console.log(newCraft);
     // fetch('http://localhost:5000/painting',{
