@@ -10,7 +10,7 @@ const Home = () => {
         <div id="slide1" className="relative w-full carousel-item">
           <img
             src="https://i.ibb.co/ydh3PRh/painted-natural-scenery-with-high-mountains-free-photo.png"
-            className="w-full h-[700px]"
+            className="w-full md:h-[700px]"
           />
           <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
             <a href="#slide4" className="btn btn-circle">
@@ -24,7 +24,7 @@ const Home = () => {
         <div id="slide2" className="relative w-full carousel-item">
           <img
             src="https://i.ibb.co/rwkQymN/edouard-tamba-9-ZFn-BKP-s-unsplash.jpg"
-            className="w-full h-[700px]"
+            className="w-full md:h-[700px]"
           />
           <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
             <a href="#slide1" className="btn btn-circle">
@@ -38,7 +38,7 @@ const Home = () => {
         <div id="slide3" className="relative w-full carousel-item">
           <img
             src="https://i.ibb.co/McZWxmh/images-1.jpg"
-            className="w-full h-[700px]"
+            className="w-full md:h-[700px]"
           />
           <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
             <a href="#slide2" className="btn btn-circle">
@@ -52,7 +52,7 @@ const Home = () => {
         <div id="slide4" className="relative w-full carousel-item">
           <img
             src="https://i.ibb.co/W5Hh43V/original-644fcac6994c57bf306c7252473c6ed9.png"
-            className="w-full h-[700px]"
+            className="w-full md:h-[700px]"
           />
           <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
             <a href="#slide3" className="btn btn-circle">
@@ -84,7 +84,23 @@ const Home = () => {
           <PaintingCard key={painting._id} painting={painting}></PaintingCard>
         ))}
       </div>
-      {/* <Footer></Footer> */}
+      <div className="p-8 space-y-8 text-center">
+        <h2 className="text-5xl">Why Chose Us</h2>
+        <p>
+          At Grove Gallery, we're passionate about nurturing the landscape
+          artist within you. Here's what sets us apart and makes us the perfect
+          partner for capturing nature's beauty on canvas:
+        </p>
+      </div>
+      <div className="min-h-screen hero bg-base-200">
+  <div className="flex-col hero-content lg:flex-row-reverse">
+    <img src="https://i.ibb.co/tmWS1Tp/Gemini-Generated-Image-u7yk7yu7yk7yu7yk.jpg" className="max-w-sm rounded-lg shadow-2xl" />
+    <div>
+      <h1 className="text-5xl font-bold">Why Choose Grove Gallery</h1>
+      <p className="py-6">Grove Gallery is your gateway to a world of captivating landscapes. Let us help you bring the beauty of nature into your life, whether through acquiring a breathtaking artwork or finding the tools and inspiration to create your own.</p>
+    </div>
+  </div>
+</div>
     </div>
   );
 };
