@@ -80,7 +80,7 @@ const Home = () => {
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3">
-        {paintings.map((painting) => (
+        {paintings?.map((painting) => (
           <PaintingCard key={painting._id} painting={painting}></PaintingCard>
         ))}
       </div>

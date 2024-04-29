@@ -19,6 +19,7 @@ import PrivateRoute from "./privateRoute/PrivateRoute";
 import ErrorElement from "./pages/ErrorElement";
 import Contact from "./components/Contact";
 import MyCraftList from "./pages/MyCraftList";
+import Details from "./pages/Details";
 
 const router = createBrowserRouter([
   {
@@ -62,6 +63,13 @@ const router = createBrowserRouter([
       {
         path:'/myList',
         element:<MyCraftList></MyCraftList>
+      },
+      {
+        path:'/details/:id',
+        element:<PrivateRoute>
+          <Details></Details>
+        </PrivateRoute>,
+        loader:({params})=>fetch(`http://localhost:5000/singleProduct/${params.id}`)
       }
     ]
   },

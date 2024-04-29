@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 const AllCraftCard = ({craft}) => {
     console.log(craft);
@@ -21,7 +22,7 @@ const AllCraftCard = ({craft}) => {
     <p>customization:{Customization}</p>
     <p>Proccessing_time:{ProccessingTime}</p>
     <div className="card-actions">
-      <button className="btn btn-primary">Buy Now</button>
+      <Link to={`/details/${craft?._id}`}><button className="btn btn-primary">view Details</button></Link>
     </div>
   </div>
 </div>

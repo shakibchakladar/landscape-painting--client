@@ -22,7 +22,7 @@ const MyCraftList = () => {
         <div>
             <h2>This is my list of email :{items.length}</h2>
             {
-                items.map(item=><ItemCard key={item.id} item={item}></ItemCard>)
+                items?.map(item=><ItemCard key={item.id} item={item}></ItemCard>)
             }
         </div>
     );
