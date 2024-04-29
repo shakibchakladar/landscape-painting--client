@@ -17,6 +17,7 @@ import FirebasePovider from "./provides/FirebasePovider";
 import Register from "./pages/login/Register";
 import PrivateRoute from "./privateRoute/PrivateRoute";
 import ErrorElement from "./pages/ErrorElement";
+import Contact from "./components/Contact";
 
 const router = createBrowserRouter([
   {
@@ -52,6 +53,10 @@ const router = createBrowserRouter([
         path:'/users',
         element:<Users></Users>,
         loader:()=>fetch('http://localhost:5000/user')
+      },
+      {
+        path:'/contact',
+        element:<Contact></Contact>
       }
     ]
   },

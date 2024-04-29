@@ -65,7 +65,7 @@ const Nav = () => {
           <NavLink
             className={({ isActive }) =>
               isActive
-                ? " btn text-primary bg-green-300 font-bold"
+                ? " btn text-primary bg-green-500 font-bold"
                 : " btn font-bold"
             }
             to="/myList"
@@ -75,12 +75,22 @@ const Nav = () => {
           <NavLink
             className={({ isActive }) =>
               isActive
-                ? " btn text-primary bg-green-300 font-bold"
+                ? " btn text-primary bg-green-500 font-bold"
                 : " btn font-bold"
             }
             to="/users"
           >
             Users
+          </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              isActive
+                ? " btn text-primary bg-green-500 font-bold"
+                : " btn font-bold"
+            }
+            to="/Contact"
+          >
+            Contact
           </NavLink>
         </ul>
 
