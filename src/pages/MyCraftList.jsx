@@ -7,7 +7,7 @@ const MyCraftList = () => {
     const [items,setItems]=useState([]);
     useEffect(() => {
         if (user?.email) {
-            fetch(`http://localhost:5000/myProduct?email=${user.email}`)
+            fetch(`https://landscape-painting-server.vercel.app/myProduct?email=${user.email}`)
                 .then(res => res.json())
                 .then(data => {
                     setItems(data);
@@ -21,9 +21,11 @@ const MyCraftList = () => {
     return (
         <div>
             <h2>This is my list of email :{items.length}</h2>
-            {
+           <div className="grid grid-cols-2 px-8">
+           {
                 items?.map(item=><ItemCard key={item._id} item={item}></ItemCard>)
             }
+           </div>
         </div>
     );
 };

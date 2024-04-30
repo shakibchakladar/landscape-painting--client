@@ -31,7 +31,7 @@ const router = createBrowserRouter([
       {
         path:'/',
         element:<Home></Home>,
-        loader: ()=>fetch('http://localhost:5000/painting')
+        loader: ()=>fetch('https://landscape-painting-server.vercel.app/painting')
       },
       {
         path:'/addCraft',
@@ -42,7 +42,7 @@ const router = createBrowserRouter([
       {
         path:'/allCraft',
         element:<AllCraft></AllCraft>,
-        loader:()=>fetch('http://localhost:5000/alCraft')
+        loader:()=>fetch('https://landscape-painting-server.vercel.app/alCraft')
       },
       {
         path:'/register',
@@ -55,7 +55,7 @@ const router = createBrowserRouter([
       {
         path:'/users',
         element:<Users></Users>,
-        loader:()=>fetch('http://localhost:5000/user')
+        loader:()=>fetch('https://landscape-painting-server.vercel.app/user')
       },
       {
         path:'/contact',
@@ -72,12 +72,12 @@ const router = createBrowserRouter([
         element:<PrivateRoute>
           <Details></Details>
         </PrivateRoute>,
-        loader:({params})=>fetch(`http://localhost:5000/singleProduct/${params.id}`)
+        loader:({params})=>fetch(`https://landscape-painting-server.vercel.app/singleProduct/${params.id}`)
       },
       {
         path:'/update/:id',
         element:<Update></Update>,
-        loader:({params})=>fetch(`http://localhost:5000/alCraft/${params.id}`)
+        loader:({params})=>fetch(`https://landscape-painting-server.vercel.app/alCraft/${params.id}`)
       }
     ]
   },

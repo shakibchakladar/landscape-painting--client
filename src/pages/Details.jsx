@@ -10,7 +10,7 @@ const Details = () => {
  const [products,setProducts]=useState({});
  useEffect(()=>{
 
-    fetch(`http://localhost:5000/singleProduct/${id}`)
+    fetch(`https://landscape-painting-server.vercel.app/singleProduct/${id}`)
     .then(res=>res.json())
     .then(data=>{
         setProducts(data);

@@ -30,7 +30,7 @@ const AddCraft = () => {
       email,
     };
 
-    fetch("http://localhost:5000/alCraft", {
+    fetch("https://landscape-painting-server.vercel.app/alCraft", {
       method: "POST",
       headers: {
         "content-type": "application/json",

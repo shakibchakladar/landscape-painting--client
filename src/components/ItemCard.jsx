@@ -17,7 +17,7 @@ const ItemCard = ({ item }) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/alCraft/${_id}`, {
+        fetch(`https://landscape-painting-server.vercel.app/alCraft/${_id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

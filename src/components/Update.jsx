@@ -31,7 +31,7 @@ const Update = () => {
       user
     };
 
-    fetch(`http://localhost:5000/alCraft/${item._id}`, {
+    fetch(`https://landscape-painting-server.vercel.app/alCraft/${item._id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
