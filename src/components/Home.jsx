@@ -101,6 +101,48 @@ const Home = () => {
     </div>
   </div>
 </div>
+<div className="rounded-md p-14 bg-stone-600">
+  <h2 className="text-4xl text-center text-white ">What People Say</h2>
+</div>
+<div className="grid grid-cols-1 gap-5 md:grid-cols-2">
+<div className="p-10 m-4 hero bg-base-200 rounded-xl">
+  <div className="flex-col hero-content lg:flex-row-reverse rounded-xl">
+    <img src="https://i.ibb.co/Km590Ry/pexels-photo-7176297.jpg" className="w-1/2 max-w-sm rounded-lg shadow-2xl " />
+    <div>
+      <h1 className="text-5xl font-bold">Kate Anderson</h1>
+      <p className="py-6">Your property managers have been active in their response to repairs and always patient with our frustrations. You have always found us wonderful tenants.</p>
+    </div>
+  </div>
+</div>
+<div className="p-10 m-4 hero bg-base-200 rounded-s-xl">
+  <div className="flex-col hero-content lg:flex-row-reverse rounded-xl">
+    <img src="https://i.ibb.co/R2qPtZH/pexels-shvets-production-7176319.jpg" className="w-1/2 max-w-sm rounded-lg shadow-2xl" />
+    <div>
+      <h1 className="text-5xl font-bold">Walter Williams</h1>
+      <p className="py-6">We recently rented an apartment through your site, and have been looked after by James Thompson. He provided us with utmost support on every property issue.</p>
+    </div>
+  </div>
+</div>
+<div className="p-10 m-4 hero bg-base-200 rounded-xl">
+  <div className="flex-col hero-content lg:flex-row-reverse rounded-xl">
+    <img src="https://i.ibb.co/xhpyF12/pexels-photo-7176320.jpg" className="w-1/2 max-w-sm rounded-lg shadow-2xl h-1/2" />
+    <div>
+      <h1 className="text-5xl font-bold">Lora</h1>
+      <p className="py-6">I have always found your team to be extremely prompt and professional with all dealings I have had with them. You always keep me updated on the progress.</p>
+    </div>
+  </div>
+</div>
+<div className="p-10 m-4 hero bg-base-200 rounded-xl">
+  <div className="flex-col hero-content lg:flex-row-reverse rounded-xl">
+    <img src="https://i.ibb.co/XbX8Qtr/images.jpg" className="max-w-sm rounded-lg shadow-2xl" />
+    <div>
+      <h1 className="text-5xl font-bold">Kate Anderson</h1>
+      <p className="py-6">Your property managers have been active in their response to repairs and always patient with our frustrations. You have always found us wonderful tenants.</p>
+    </div>
+  </div>
+</div>
+
+</div>
     </div>
   );
 };
