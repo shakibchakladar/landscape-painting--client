@@ -72,16 +72,16 @@ const Nav = () => {
           >
             My Art&Craft List
           </NavLink>
-          {/* <NavLink
+          <NavLink
             className={({ isActive }) =>
               isActive
                 ? " btn text-primary bg-green-500 font-bold"
                 : " btn font-bold"
             }
-            to="/users"
+            to="/blogs"
           >
-            Users
-          </NavLink> */}
+            Blogs
+          </NavLink>
           <NavLink
             className={({ isActive }) =>
               isActive

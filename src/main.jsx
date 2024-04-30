@@ -11,8 +11,6 @@ import AddCraft from "./components/AddCraft";
 import AllCraft from "./components/AllCraft";
 // import Singup from "./pages/login/Singup";
 import Login from "./pages/login/Login";
-// import AuthProvider from "./provides/AuthProvider";
-import Users from "./pages/Users";
 import FirebasePovider from "./provides/FirebasePovider";
 import Register from "./pages/login/Register";
 import PrivateRoute from "./privateRoute/PrivateRoute";
@@ -21,6 +19,7 @@ import Contact from "./components/Contact";
 import MyCraftList from "./pages/MyCraftList";
 import Details from "./pages/Details";
 import Update from "./components/Update";
+import Blogs from "./components/Blogs";
 
 const router = createBrowserRouter([
   {
@@ -53,11 +52,6 @@ const router = createBrowserRouter([
         element:<Login></Login>
       },
       {
-        path:'/users',
-        element:<Users></Users>,
-        loader:()=>fetch('https://landscape-painting-server.vercel.app/user')
-      },
-      {
         path:'/contact',
         element:<Contact></Contact>
       },
@@ -78,6 +72,10 @@ const router = createBrowserRouter([
         path:'/update/:id',
         element:<Update></Update>,
         loader:({params})=>fetch(`https://landscape-painting-server.vercel.app/alCraft/${params.id}`)
+      },
+      {
+        path:'/blogs',
+        element:<Blogs></Blogs>
       }
     ]
   },
