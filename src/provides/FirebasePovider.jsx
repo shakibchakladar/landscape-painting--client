@@ -11,7 +11,7 @@ export const AuthContext=createContext(null)
 
 const FirebasePovider = ({children}) => {
     const [user,setUser]=useState(null)
-    console.log(user);
+    // console.log(user);
 
 
     // create user

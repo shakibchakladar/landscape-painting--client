@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const AllCraftCard = ({craft}) => {
-    console.log(craft);
+    // console.log(craft);
    const {name,
       subcategory,
       price,
@@ -18,7 +18,7 @@ const AllCraftCard = ({craft}) => {
   </figure>
   <div className="items-center text-center card-body">
     <h2 className="card-title">{name}</h2>
-    <p>{ratting}.0</p>
+    <p>Rating:{ratting}.0</p>
     <p>customization:{Customization}</p>
     <p>Proccessing_time:{ProccessingTime}</p>
     <div className="card-actions">

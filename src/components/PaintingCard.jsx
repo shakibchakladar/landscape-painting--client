@@ -1,6 +1,6 @@
 
 const PaintingCard = ({painting}) => {
-    console.log(painting);
+    // console.log(painting);
    const  {image,name,price,ratting,artistName}=painting
     return (
 <div className="shadow-xl card w-96 bg-base-100">

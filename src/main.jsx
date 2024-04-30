@@ -20,6 +20,7 @@ import ErrorElement from "./pages/ErrorElement";
 import Contact from "./components/Contact";
 import MyCraftList from "./pages/MyCraftList";
 import Details from "./pages/Details";
+import Update from "./components/Update";
 
 const router = createBrowserRouter([
   {
@@ -62,7 +63,9 @@ const router = createBrowserRouter([
       },
       {
         path:'/myList',
-        element:<MyCraftList></MyCraftList>
+        element:<PrivateRoute>
+          <MyCraftList></MyCraftList>
+        </PrivateRoute>
       },
       {
         path:'/details/:id',
@@ -70,6 +73,11 @@ const router = createBrowserRouter([
           <Details></Details>
         </PrivateRoute>,
         loader:({params})=>fetch(`http://localhost:5000/singleProduct/${params.id}`)
+      },
+      {
+        path:'/update/:id',
+        element:<Update></Update>,
+        loader:({params})=>fetch(`http://localhost:5000/alCraft/${params.id}`)
       }
     ]
   },

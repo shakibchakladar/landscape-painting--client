@@ -11,7 +11,7 @@ const MyCraftList = () => {
                 .then(res => res.json())
                 .then(data => {
                     setItems(data);
-                    console.log(data);
+                    // console.log(data);
                 })
                 .catch(error => {
                     console.error('Error fetching products:', error);
@@ -22,7 +22,7 @@ const MyCraftList = () => {
         <div>
             <h2>This is my list of email :{items.length}</h2>
             {
-                items?.map(item=><ItemCard key={item.id} item={item}></ItemCard>)
+                items?.map(item=><ItemCard key={item._id} item={item}></ItemCard>)
             }
         </div>
     );

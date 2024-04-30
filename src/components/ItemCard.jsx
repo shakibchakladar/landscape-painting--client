@@ -1,8 +1,39 @@
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const ItemCard = ({ item }) => {
-  const { name, price, ratting, customization, image } = item;
-  // console.log(image);
+  const { _id, name, price, ratting, customization, image } = item;
+  // console.log(item);
+
+  const handleDelete = (_id) => {
+    // console.log(_id);
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        fetch(`http://localhost:5000/alCraft/${_id}`, {
+          method: "DELETE",
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
+            if (data.deletedCount > 0)
+              Swal.fire({
+                title: "Deleted!",
+                text: "Your file has been deleted.",
+                icon: "success",
+              });
+          });
+      }
+    });
+  };
+
   return (
     <div className="shadow-xl card card-compact w-96 bg-base-100">
       <figure>
@@ -20,8 +51,17 @@ const ItemCard = ({ item }) => {
           <Link to={`/details/${item?._id}`}>
             <button className="btn btn-primary">view Details</button>
           </Link>
+          <Link to={`/update/${_id}`}>
           <button className="btn btn-primary">Update</button>
-          <button className="bg-red-600 btn">Delete</button>
+          </Link>
+          <button
+            onClick={() => {
+              handleDelete(_id);
+            }}
+            className="bg-red-600 btn"
+          >
+            Delete
+          </button>
         </div>
       </div>
     </div>
