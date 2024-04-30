@@ -3,7 +3,7 @@ const PaintingCard = ({painting}) => {
     // console.log(painting);
    const  {image,name,price,ratting,artistName}=painting
     return (
-<div className="shadow-xl card w-96 bg-base-100">
+<div className="shadow-xl card w-96 bg-base-100 hover:bg-green-200">
   <figure className="px-10 pt-10">
     <img src={image} alt="Shoes" className="rounded-xl" />
   </figure>
